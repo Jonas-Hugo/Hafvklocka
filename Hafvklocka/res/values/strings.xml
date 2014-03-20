@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Häfvklocka</string>
+    <string name="welcome_text">Välj Speltyp</string>
+    <string name="Welcome_desc">Enkel tidtagning eller turnering</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Häfvklocka</string>
+    <string name="watch_disc">Starta enkel tidtagning</string>
+    <string name="bracket_disc">Hallå!! Det är inte utvecklat ännu, Ta det lungt!!</string>
+    <string name="btnStart">Starta tävling</string>
+    <string name="btnNext">Nästa heat</string>
+    <string name="btnClear">Nollställ tidtagning</string>
+    <string name="title_activity_time">Tidtagning</string>
+    <string name="defualtTime">00:00:00</string>
+    <string name="add_player">Lägg till spelare</string>
+    <string name="title_activity_add_player">Lägg till spelare</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_setting">Inställningar</string>
+    <string name="MicSens">Mic känslighet</string>
+    <string name="btnSaveSettings">Spara</string>
+    <string name="MaxGroups">Max antal heat</string>
+    <string name="Settings">Inställningar</string>
+    <string name="title_activity_group_view">Häfvklocka</string>
+    <string name="resultHeader">Resultattavla</string>
+    <string name="title_activity_final_view">FinalViewActivity</string>
+
+</resources>
