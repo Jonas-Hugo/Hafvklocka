@@ -32,37 +32,37 @@
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hugo.hafvklocka.MainActivity" />
+                android:value="com.hugo.hafvklocka.activities.MainActivity" />
         </activity>
       <activity
-            android:name=".AddPlayerActivity"
+            android:name="com.hugo.hafvklocka.activities.AddPlayerActivity"
             android:label="@string/title_activity_add_player"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hugo.hafvklocka.MainActivity" />
+                android:value="com.hugo.hafvklocka.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".SettingActivity"
+            android:name="com.hugo.hafvklocka.activities.SettingActivity"
             android:label="@string/title_activity_setting"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hugo.hafvklocka.MainActivity" />
+                android:value="com.hugo.hafvklocka.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".GroupViewActivity"
+            android:name="com.hugo.hafvklocka.activities.GroupViewActivity"
             android:label="@string/title_activity_group_view" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hugo.hafvklocka.AddPlayerActivity" />
+                android:value="com.hugo.hafvklocka.activities.AddPlayerActivity" />
         </activity>
         <activity
-            android:name=".FinalViewActivity"
+            android:name="com.hugo.hafvklocka.activities.FinalViewActivity"
             android:label="@string/title_activity_final_view" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.hugo.hafvklocka.TimeActivity" />
+                android:value="com.hugo.hafvklocka.activities.TimeActivity" />
         </activity>
     </application>
 

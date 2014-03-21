@@ -61,7 +61,7 @@
         android:textColor="@color/teil"
         android:textSize="@dimen/SettingsText" />
 
-    <com.hugo.GraphView.LineGraphView
+    <GraphView.LineGraphView
         android:id="@+id/graphLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
         android:layout_marginTop="8dp"
         android:orientation="vertical" >
 
-    </com.hugo.GraphView.LineGraphView>
+    </GraphView.LineGraphView>
 
     <TextView
         android:id="@+id/nrHeatsText"
