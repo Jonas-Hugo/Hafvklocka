@@ -1,10 +1,12 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.hafvklocka;
 
 import java.util.concurrent.TimeUnit;
 
+import com.hugo.hafvklocka.Konstants;
+import com.hugo.hafvklocka.drivers.Clock;
+
 import GraphView.LineGraphView;
 import GraphView.GraphView.GraphViewData;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;

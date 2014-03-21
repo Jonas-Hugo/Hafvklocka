@@ -1,8 +1,16 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.activities;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import com.hugo.hafvklocka.Konstants;
+import com.hugo.hafvklocka.R;
+import com.hugo.hafvklocka.Settings;
+import com.hugo.hafvklocka.R.id;
+import com.hugo.hafvklocka.R.layout;
+import com.hugo.hafvklocka.R.menu;
+import com.hugo.hafvklocka.drivers.Mic;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,7 +22,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
 import GraphView.*;
 import GraphView.GraphView.GraphViewData;
 

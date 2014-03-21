@@ -1,4 +1,14 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.activities;
+
+import com.hugo.hafvklocka.Konstants;
+import com.hugo.hafvklocka.R;
+import com.hugo.hafvklocka.R.id;
+import com.hugo.hafvklocka.R.layout;
+import com.hugo.hafvklocka.R.menu;
+import com.hugo.hafvklocka.drivers.Clock;
+import com.hugo.hafvklocka.drivers.Mic;
+import com.hugo.hafvklocka.hafvklocka.Game;
+import com.hugo.hafvklocka.hafvklocka.Player;
 
 import android.os.Bundle;
 import android.os.Handler;

@@ -1,7 +1,15 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.activities;
 
 import java.io.*;
 import java.util.ArrayList;
+
+import com.hugo.hafvklocka.Konstants;
+import com.hugo.hafvklocka.R;
+import com.hugo.hafvklocka.Settings;
+import com.hugo.hafvklocka.R.id;
+import com.hugo.hafvklocka.R.layout;
+import com.hugo.hafvklocka.R.menu;
+import com.hugo.hafvklocka.hafvklocka.Game;
 
 import android.os.Bundle;
 import android.app.Activity;

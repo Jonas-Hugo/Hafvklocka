@@ -1,4 +1,9 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.activities;
+
+import com.hugo.hafvklocka.R;
+import com.hugo.hafvklocka.R.id;
+import com.hugo.hafvklocka.R.layout;
+import com.hugo.hafvklocka.R.menu;
 
 import android.os.Bundle;
 import android.app.Activity;

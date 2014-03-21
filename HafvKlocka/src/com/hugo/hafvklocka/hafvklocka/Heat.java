@@ -1,4 +1,4 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.hafvklocka;
 
 public class Heat {
 	

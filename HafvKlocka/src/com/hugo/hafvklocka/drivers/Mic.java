@@ -1,4 +1,7 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.drivers;
+
+import com.hugo.hafvklocka.Konstants;
+import com.hugo.hafvklocka.Settings;
 
 import android.media.AudioFormat;
 import android.media.AudioRecord;

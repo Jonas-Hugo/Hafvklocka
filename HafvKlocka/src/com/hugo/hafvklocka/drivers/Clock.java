@@ -1,10 +1,12 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.drivers;
 
 import android.os.Handler;
 import android.os.Message;
 import android.widget.*;
 
 import java.util.concurrent.TimeUnit;
+
+import com.hugo.hafvklocka.Konstants;
 
 public class Clock extends Handler{
 

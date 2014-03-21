@@ -1,7 +1,10 @@
-package com.hugo.hafvklocka;
+package com.hugo.hafvklocka.hafvklocka;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+import com.hugo.hafvklocka.Konstants;
+import com.hugo.hafvklocka.Settings;
 
 import android.util.Log;
 
