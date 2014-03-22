@@ -63,14 +63,10 @@ public class SettingActivity extends Activity {
 
 			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
 			}
 
 			@Override
-			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
+			public void onStopTrackingTouch(SeekBar seekBar) {				
 			}
         });
         maxHeats.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
@@ -85,14 +81,10 @@ public class SettingActivity extends Activity {
 
 			@Override
 			public void onStartTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
 			}
 
 			@Override
 			public void onStopTrackingTouch(SeekBar seekBar) {
-				// TODO Auto-generated method stub
-				
 			}
         });
         series = new GraphViewSeries(new GraphViewData[] {new GraphViewData(0, 0.0d), new GraphViewData(1, 1.0d)});

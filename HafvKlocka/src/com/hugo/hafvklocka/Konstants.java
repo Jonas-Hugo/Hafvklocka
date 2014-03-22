@@ -2,6 +2,8 @@ package com.hugo.hafvklocka;
 
 public class Konstants {
 	
+	//TODO: Create Enums for these values instead. 
+	
 	//Clock Values
 	public static final int START_ONE = 2;
 	public static final int START_TWO = 3;
