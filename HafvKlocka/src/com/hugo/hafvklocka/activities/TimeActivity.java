@@ -16,15 +16,16 @@ import android.widget.TextView;
 import com.hugo.hafvklocka.Konstants;
 import com.hugo.hafvklocka.R;
 import com.hugo.hafvklocka.drivers.Clock;
-import com.hugo.hafvklocka.drivers.Mic;
+import com.hugo.hafvklocka.drivers.Controller;
+import com.hugo.hafvklocka.drivers.Controller.GameMode;
 import com.hugo.hafvklocka.hafvklocka.Game;
 import com.hugo.hafvklocka.hafvklocka.Player;
 
 public class TimeActivity extends Activity {
 	private TextView time1, time2, player1, player2;
-	private Clock clock;
+	private Clock clock1, clock2;
 	private int type;
-	private Mic mic;
+	private Controller controller;
 
 	private Handler done = new Handler() {
 		public void handleMessage(Message m) {
@@ -36,6 +37,20 @@ public class TimeActivity extends Activity {
 		}
 	};
 
+	final Handler timeHandler1 = new Handler() {
+		@Override
+		public void handleMessage(Message m) {
+			time1.setText(Clock.getTimeString(m.what));
+		}
+	};
+
+	final Handler timeHandler2 = new Handler() {
+		@Override
+		public void handleMessage(Message m) {
+			time2.setText(Clock.getTimeString(m.what));
+		}
+	};
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,10 +59,11 @@ public class TimeActivity extends Activity {
 		time2 = (TextView) findViewById(R.id.clock2);
 		player1 = (TextView) findViewById(R.id.name1);
 		player2 = (TextView) findViewById(R.id.name2);
-		if (Game.getGameMode() == Konstants.TIME_MODE) {
-			clock = new Clock();
+		if (Game.getGameMode() == GameMode.TIME_MODE) {
+			clock1 = new Clock(timeHandler1);
 		} else {
-			clock = new Clock();
+			clock1 = new Clock(timeHandler1);
+			clock2 = new Clock(timeHandler2);
 			player1.setText(Game.getNextHeats().getPlayer1().getName());
 			player2.setText(Game.getNextHeats().getPlayer2().getName());
 		}
@@ -57,13 +73,18 @@ public class TimeActivity extends Activity {
 	@Override
 	public void onResume() {
 		super.onResume();
-		mic = new Mic(clock, Game.getGameMode());
+		if (Game.getGameMode() == GameMode.TIME_MODE) {
+			controller = new Controller(this.getApplicationContext(), Game.getGameMode(), clock1);
+		} else {
+			controller = new Controller(this.getApplicationContext(), Game.getGameMode(), clock1, clock2);
+		}
+		controller.start();
 	}
 
 	@Override
 	public void onPause() {
 		super.onPause();
-		mic.kill();
+		controller.kill();
 	}
 
 	@Override
@@ -150,8 +171,8 @@ public class TimeActivity extends Activity {
 	}
 
 	public void stop(View btn) {
-		mic.reset();
-		clock.sendMessage(Message.obtain(clock, Konstants.RESET));
+		controller.reset();
+		clock1.sendMessage(Message.obtain(clock1, Konstants.RESET));
 	}
 
 	public void btnClear(View btn) {

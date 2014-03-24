@@ -32,8 +32,10 @@ public class Clock extends Handler {
 
 	private long initTime = 0;
 	private String timeText;
+	private Handler textHandler;
 
-	public Clock() {
+	public Clock(Handler textHandler) {
+		this.textHandler = textHandler;
 	}
 
 	@Override
@@ -71,18 +73,14 @@ public class Clock extends Handler {
 		handleMessage(Message.obtain(this, Actions.RESET.getNumber()));
 	}
 
-	public String getText() {
-		return timeText;
-	}
-
 	private void setText() {
 		long now = System.currentTimeMillis();
 		long delta = now - initTime;
-		timeText = getTimeString(delta);
+		textHandler.sendMessage(Message.obtain(textHandler, (int) delta));
 	}
 
 	private void resetText() {
-		timeText = getTimeString(0);
+		textHandler.sendMessage(Message.obtain(textHandler, 0));
 	}
 
 	public static String getTimeString(long delta) {
